@@ -26,4 +26,4 @@ services:
     volumes:
       - pgdbdata:/var/lib/postgresql/data/
 volumes:
-  pgdbdata: null
+  pgdbdata:
