@@ -9,14 +9,12 @@ pipeline{
         timestamps()
     }
     stages{
-        stage("First step"){
+        stage("create docker image"){
             steps{
-                sh 'ssh ubuntu2@ub2 \'hostname\''
-            }
-        }
-        stage("Second step"){
-            steps{
-                sh 'ssh ubuntu2@ub2 \'uptime\''
+                echo " =============== start building image ====================="
+                dir ('docker/toolbox') {
+                        sh 'docker build . '
+                }
             }
         }
     }
