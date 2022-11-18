@@ -14,5 +14,10 @@ pipeline{
                 sh 'ssh ubuntu2@ub2 \'hostname\''
             }
         }
+        stage("Second step"){
+            steps{
+                sh 'ssh ubuntu2@ub2 \'uptime\''
+            }
+        }
     }
 }
